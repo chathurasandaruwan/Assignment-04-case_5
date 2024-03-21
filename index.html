@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case 5</title>
+    <link rel="stylesheet" href="assets/normalize.css">
+    <style>
+        main{
+            width: 50vw;
+            height: 50vh;
+            border: 3px solid red;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            overflow: hidden;
+        }
+        section{
+            width: 200vw;
+            display: flex;
+
+            animation-name: animation;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+            /*animation-timing-function: linear;*/
+        }
+        section>div{
+            width: 50vw;
+            height: 50vh;
+        }
+
+        section>div:first-child{
+            background-image: url("assets/image/slide1.jpeg");
+        }
+        section>div:nth-child(2){
+            background-image: url("assets/image/slide2.jpeg");
+        }
+        section>div:nth-child(3){
+            background-image: url("assets/image/slide3.jpeg");
+        }
+        section>div:nth-child(4){
+            background-image: url("assets/image/slide4.jpeg");
+        }
+
+      @keyframes animation {
+          0%,20%{
+              transform: translateX(0);
+          }
+          25% ,45%{
+              transform: translateX(-25%);
+          }
+          50% , 70%{
+              transform: translateX(-50%);
+          }
+          75% ,100%{
+              transform: translateX(-75%);
+          }
+          /*100%{
+
+          }*/
+
+      }
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</main>
+</body>
+</html>
